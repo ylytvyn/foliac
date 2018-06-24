@@ -1,0 +1,224 @@
+:root {
+	--color-green: #48bf72;
+	--color-grey: #3c4955;
+}
+
+/* Fonts */
+@font-face {
+    font-family: BigJohn;
+    src: url('fonts/BigJohn/bigjohn-webfont.eot');
+    src: url('fonts/BigJohn/bigjohn-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/BigJohn/bigjohn-webfont.woff2') format('woff2'),
+         url('fonts/BigJohn/bigjohn-webfont.woff') format('woff'),
+         url('fonts/BigJohn/bigjohn-webfont.ttf') format('truetype'),
+         url('fonts/BigJohn/bigjohn-webfont.svg#BigJohn') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: SlimJoe;
+    src: url('fonts/SlimJoe/slimjoe-webfont.eot');
+    src: url('fonts/SlimJoe/slimjoe-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/SlimJoe/slimjoe-webfont.woff2') format('woff2'),
+         url('fonts/SlimJoe/slimjoe-webfont.woff') format('woff'),
+         url('fonts/SlimJoe/slimjoe-webfont.ttf') format('truetype'),
+         url('fonts/SlimJoe/slimjoe-webfont.svg#SlimJoe') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Reset styles */
+* {
+	padding: 0;
+	margin: 0;
+	border: 0;
+	outline: none;
+	box-sizing: border-box;
+	transition: all .3s ease-in-out;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+body, html {
+	min-height: 100%;
+	width: 100%;
+	font: 16px Lato, sans-serif;
+	min-width: 1180px;
+}
+
+.clear::after, .clear::before {
+	content: " ";
+	display: table;
+}
+
+.clear::after {
+	clear: both;
+}
+
+/* Main Styles */
+.container {
+	width: 1180px;
+	padding: 0 20px;
+	margin: 0 auto;
+}
+
+.foliac-header {
+	background: var(--color-grey) url('../images/bg-header.jpg') top center no-repeat;
+	height: 650px;
+	text-align: center;
+}
+
+.foliac-header nav {
+	overflow: hidden;
+	padding-top: 35px;
+	margin-bottom: 141px;
+}
+
+.foliac-logo {
+	float: left;
+	width: 175px;
+	height: 100px;
+	background: url('../images/logo.png') no-repeat;
+}
+
+.foliac-logo:hover {
+	transform: scale(.9);
+}
+
+.foliac-menu {
+	float: right;
+	line-height: 96px;
+}
+
+.foliac-menu li {
+	display: inline-block;
+	margin-left: 45px;
+}
+
+.foliac-menu li::after {
+	content: '/';
+	margin-left: 55px;
+	color: rgba(255, 255, 255, .2);
+	font-size: 22px;
+	position: relative;
+	bottom: -3px;
+}
+
+.foliac-menu li:last-child::after {
+	display: none;
+}
+
+.foliac-menu li a {
+	color: #fff;
+	font-weight: 700;
+	text-decoration: none;
+}
+
+.foliac-menu li a:hover {
+	color: var(--color-green);
+}
+
+.foliac-titles {
+	color: #fff;
+	text-transform: uppercase;
+	text-align: center;
+}
+
+.foliac-titles h1 {
+	font: 46px BigJohn, sans-serif;
+	margin-bottom: 17px;
+}
+
+.foliac-titles h2 {
+	font: 30px SlimJoe, sans-serif;
+	margin-bottom: 53px;
+	letter-spacing: 1.1px;
+}
+
+[class^="foliac-btn"] {
+	font-weight: 700;
+	font-size: 14px;
+	line-height: 25px;
+	text-transform: uppercase;
+	border: 2px solid;
+	border-radius: 3px;
+	text-decoration: none;
+	padding: 10px 20px;
+}
+
+[class$="-green"] {
+	color: var(--color-green);
+}
+
+[class$="-green"]:hover {
+	color: #fff;
+}
+
+.foliac-footer {
+	background: var(--color-grey);
+	height: 200px;
+	color: #fff;
+}
+
+.foliac-footer p {
+	float: left;
+	line-height: 200px;
+}
+
+.foliac-footer p a {
+	color: #fff;
+	text-decoration: none;
+	font-weight: 700;
+}
+
+.foliac-footer p a:hover {
+	color: var(--color-green);
+}
+
+.foliac-footer ul {
+	float: right;
+	font-size: 0;
+	margin-top: 72px;
+}
+
+.foliac-footer ul li {
+	display: inline-block;
+	margin-left: 40px;
+}
+
+.foliac-footer ul li:hover {
+	transform: scale(.9);
+}
+
+.foliac-contact .container{
+	width: 740px;
+	padding: 45px 20px 55px;
+}
+
+.foliac-contact .foliac-form-title {
+	font: 26px BigJohn, sans-serif;
+	color: var(--color-green);
+	text-align: center;
+	margin-bottom: 45px;
+	text-transform: uppercase;
+}
+
+.foliac-contact button[type="submit"] {
+	width: 100%;
+	height: 50px;
+	border-radius: 3px;
+	font: 700 14px Lato, sans-serif;
+	color: #fff;
+	background: var(--color-green);
+	cursor: pointer;
+	letter-spacing: 2.2px;
+	text-transform: uppercase;
+}
+
+.foliac-contact button[type="submit"]:hover {
+	background: var(--color-grey);
+}
