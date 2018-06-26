@@ -1,6 +1,7 @@
 :root {
 	--color-green: #48bf72;
 	--color-grey: #3c4955;
+	--font: Lato, sans-serif;
 }
 
 /* Fonts */
@@ -46,8 +47,9 @@ img {
 body, html {
 	min-height: 100%;
 	width: 100%;
-	font: 16px Lato, sans-serif;
+	font: 16px var(--font);
 	min-width: 1180px;
+	background: #f9f9f9;
 }
 
 .clear::after, .clear::before {
@@ -79,6 +81,7 @@ body, html {
 	position: fixed;
 	left: 0;
 	top: 0;
+	z-index: 1;
 	width: 100%;
 	min-width: 1180px;
 	background: rgba(60, 73, 85, .8);
@@ -217,13 +220,12 @@ body, html {
 	width: 100%;
 	height: 50px;
 	border-radius: 3px;
-	font: 700 14px Lato, sans-serif;
+	font: 700 14px var(--font);
 	color: #fff;
 	background: var(--color-green);
 	cursor: pointer;
 	letter-spacing: 2.2px;
 	text-transform: uppercase;
-	margin-top: 30px;
 }
 
 .foliac-contact button[type="submit"]:hover {
@@ -237,7 +239,7 @@ body, html {
 
 [class^="foliac-form-"] input,
 [class^="foliac-form-"] textarea {
-	font: 700 16px/25px Lato, sans-serif;
+	font: 700 16px/25px var(--font);
 	color: #a6a5a5;
 	background: #f1f1f1;
 	width: 100%;
@@ -259,7 +261,7 @@ body, html {
 
 .foliac-form-textarea textarea {
 	min-height: 230px;
-	transition: none;
+	transition-property: border-color;
 }
 
 .foliac-contact form {
