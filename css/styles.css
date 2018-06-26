@@ -70,12 +70,18 @@ body, html {
 	background: var(--color-grey) url('../images/bg-header.jpg') top center no-repeat;
 	height: 650px;
 	text-align: center;
+	padding-top: 276px;
 }
 
 .foliac-header nav {
 	overflow: hidden;
-	padding-top: 35px;
-	margin-bottom: 141px;
+	padding: 35px 0;
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 100%;
+	min-width: 1180px;
+	background: rgba(60, 73, 85, .8);
 }
 
 .foliac-logo {
@@ -217,8 +223,106 @@ body, html {
 	cursor: pointer;
 	letter-spacing: 2.2px;
 	text-transform: uppercase;
+	margin-top: 30px;
 }
 
 .foliac-contact button[type="submit"]:hover {
 	background: var(--color-grey);
+}
+
+[class^="foliac-form-"] {
+	position: relative;
+	margin-bottom: 30px;
+}
+
+[class^="foliac-form-"] input,
+[class^="foliac-form-"] textarea {
+	font: 700 16px/25px Lato, sans-serif;
+	color: #a6a5a5;
+	background: #f1f1f1;
+	width: 100%;
+	border: 2px solid var(--color-grey);
+	border-radius: 3px;
+	padding: 15px 20px 15px 75px;
+	resize: vertical;
+}
+
+[class^="foliac-form-"] input:focus,
+[class^="foliac-form-"] textarea:focus {
+	border-color: var(--color-green);
+}
+
+[class^="foliac-form-"] input:focus + label,
+[class^="foliac-form-"] textarea:focus + label {
+	background-color: var(--color-green);
+}
+
+.foliac-form-textarea textarea {
+	min-height: 230px;
+	transition: none;
+}
+
+.foliac-contact form {
+	font-size: 0;
+}
+
+.foliac-form-input {
+	width: calc(50% - 15px);
+	display: inline-block;
+}
+
+.foliac-form-input:first-child {
+	padding-right: 30px;
+	width: calc(50% + 15px);
+}
+
+[class^="foliac-form-"] label {
+	width: 50px;
+	height: 100%;
+	background-color: var(--color-grey);
+	background-repeat: no-repeat;
+	position: absolute;
+	left: 0;
+	top: 0;
+	border-radius: 3px 0 0 3px;
+}
+
+[class^="foliac-form-"] label::after {
+	left: 100%;
+	top: 50%;
+	border: solid transparent;
+	content: " ";
+	height: 0;
+	width: 0;
+	position: absolute;
+	pointer-events: none;
+	border-color: rgba(60, 73, 85, 0);
+	border-left-color: var(--color-grey);
+	border-width: 6px;
+	margin-top: -6px;
+	transition: all .3s ease-in-out;
+}
+
+[class^="foliac-form-"] input:focus + label::after,
+[class^="foliac-form-"] textarea:focus + label::after {
+	border-left-color: var(--color-green);
+}
+
+.foliac-form-textarea label::after {
+	top: 30px;
+}
+
+.foliac-contact [for="foliac-name"] {
+	background-image: url('../images/person.png');
+	background-position: center;
+}
+
+.foliac-contact [for="foliac-email"] {
+	background-image: url('../images/mail.png');
+	background-position: center;
+}
+
+.foliac-contact [for="foliac-text"] {
+	background-image: url('../images/crayon.png');
+	background-position: center 20px;
 }
