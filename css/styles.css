@@ -81,7 +81,7 @@ body, html {
 	position: fixed;
 	left: 0;
 	top: 0;
-	z-index: 1;
+	z-index: 2;
 	width: 100%;
 	min-width: 1180px;
 	background: rgba(60, 73, 85, .8);
@@ -159,12 +159,16 @@ body, html {
 	padding: 10px 20px;
 }
 
+[class^="foliac-btn"]:hover {
+	color: #fff;
+}
+
 [class$="-green"] {
 	color: var(--color-green);
 }
 
-[class$="-green"]:hover {
-	color: #fff;
+[class$="-grey"] {
+	color: var(--color-grey);
 }
 
 .foliac-footer {
@@ -327,4 +331,144 @@ body, html {
 .foliac-contact [for="foliac-text"] {
 	background-image: url('../images/crayon.png');
 	background-position: center 16px;
+}
+
+.foliac-portfolio {
+	padding: 96px 0 59px;
+}
+
+.foliac-portfolio-menu {
+	text-align: center;
+	font-size: 0;
+	margin-bottom: 56px;
+}
+
+.foliac-portfolio-menu li {
+	display: inline-block;
+	font-size: 16px;
+	font-weight: 700;
+	margin: 0 7px;
+}
+
+.foliac-portfolio-menu li a {
+	color: var(--color-grey);
+	text-decoration: none;
+	padding: 7px 15px;
+	background: #eaeaea;
+	border-radius: 2px;
+}
+
+.foliac-portfolio-menu li a:hover,
+.foliac-portfolio-menu li.foliac-portfolio-menu__active a {
+	background: var(--color-green);
+	color: #fff;
+}
+
+.foliac-grid-1 {
+	width: 39.5%;
+}
+
+.foliac-grid-2 {
+	width: 57%;
+}
+
+.foliac-portfolio-items {
+	overflow: hidden;
+}
+
+.foliac-portfolio-item {
+	float: left;
+	margin: 0 3.5% 40px 0;
+	height: 305px;
+	border-radius: 10px;
+	overflow: hidden;
+	position: relative;
+	cursor: pointer;
+}
+
+.foliac-portfolio-item:nth-child(2n) {
+	margin-right: 0;
+}
+
+.foliac-grid-height {
+	height: 435px;
+}
+
+.foliac-portfolio-item img {
+	min-width: 100%;
+	min-height: 100%;
+	max-width: none;
+	position: absolute;
+	margin: auto;
+	left: 0;
+	top: 0;
+	right: 0;
+	bottom: 0;
+}
+
+.foliac-portfolio-item-hover {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	background: rgba(72, 191, 114, .8);
+	color: #fff;
+	text-align: center;
+	line-height: 30px;
+	top: -100%;
+}
+
+.foliac-portfolio-item:hover .foliac-portfolio-item-hover {
+	top: 0;
+}
+
+.foliac-portfolio-item-hover h2 {
+	font-size: 30px;
+	font-weight: 700;
+}
+
+.foliac-portfolio-item-hover div {
+	position: absolute;
+	width: 100%;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+.foliac-author {
+	background: url('../images/man-bg.jpg') no-repeat top center;
+	position: relative;
+	padding: 85px 0 97px;
+}
+
+.foliac-author::after {
+	content: '';
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	background: rgba(60, 73, 85, .7);
+}
+
+.foliac-about {
+	position: relative;
+	z-index: 1;
+	color: #fff;
+	padding-left: 51.7%;
+	width: 90%;
+}
+
+.foliac-about h2 {
+	font-size: 30px;
+	font-weight: 700;
+	line-height: 39px;
+}
+
+.foliac-about h3 {
+	font-size: 22px;
+	margin-bottom: 30px;
+}
+
+.foliac-about p {
+	line-height: 26px;
+	margin-bottom: 40px;
 }
